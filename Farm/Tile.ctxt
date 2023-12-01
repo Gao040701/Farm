@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Tile
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Tile\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Tile\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=image
+comment2.target=void\ adjust(greenfoot.GreenfootImage)
+comment2.text=\r\n\ adjust\ the\ transparancy\ of\ tiles\ based\ on\ thier\ distance\ from\ the\ center\r\n\ \r\n\ NOTE\:\ this\ will\ be\ changed\ to\ a\ rectangle;\ currently\ it\ fades\ based\ on\ a\ circle\r\n
+comment3.params=
+comment3.target=void\ checkMouseAction()
+comment3.text=\r\n\ handles\ all\ mouse\ input\r\n
+comment4.params=
+comment4.target=void\ checkKeypressAction()
+comment4.text=\r\n\ handles\ all\ keyboard\ input\r\n
+comment5.params=
+comment5.target=boolean\ hoveringThis()
+comment5.text=\r\n\ Checks\ if\ the\ mouse\ is\ hovering\ exactly\ on\ the\ issometic\ square\r\n
+numComments=6
