@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Plant
+comment0.text=\r\n\ Super\ Class\ for\ all\ plants\ that\ can\ be\ placed\ on\ dirtTiles\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Plant()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ grow()
+comment4.params=plot\ tile
+comment4.target=void\ plant(LandPlot,\ DirtTile)
+comment5.params=
+comment5.target=void\ nextFrame()
+comment6.params=
+comment6.target=int\ getGrowthRate()
+comment7.params=growthRate
+comment7.target=void\ setGrowthRate(int)
+numComments=8

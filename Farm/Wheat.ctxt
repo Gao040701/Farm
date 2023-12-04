@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Wheat
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Wheat\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Wheat()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ initialize()
+comment4.params=
+comment4.target=void\ grow()
+comment5.params=
+comment5.target=void\ collect()
+comment6.params=
+comment6.target=void\ checkKeypressAction()
+comment7.params=
+comment7.target=void\ checkMouseAction()
+comment8.params=
+comment8.target=void\ playPlaceSound()
+comment9.params=
+comment9.target=void\ playRemoveSound()
+numComments=10

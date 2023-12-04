@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Inventory
+comment0.text=\r\n\ This\ class\ will\ store\ all\ the\ items\ that\ have\ been\ attained\ by\ the\ user\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=saveFile
+comment2.target=void\ initialize(java.lang.String)
+comment3.params=saveFile
+comment3.target=void\ loadGame(java.lang.String)
+comment4.params=
+comment4.target=void\ resetData()
+comment5.params=id
+comment5.target=int\ getObjectCount(ObjectID)
+comment6.params=id
+comment6.target=java.util.ArrayList\ getObjects(ObjectID)
+comment7.params=id
+comment7.target=greenfoot.Actor\ retrieveOneObject(ObjectID)
+comment8.params=id\ actor
+comment8.target=void\ addObject(ObjectID,\ greenfoot.Actor)
+numComments=9
