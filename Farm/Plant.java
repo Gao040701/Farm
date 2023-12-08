@@ -13,12 +13,18 @@ public abstract class Plant extends Tile
     protected int maturity; 
     protected int growthStage;
     protected int lifeTime;
-    protected boolean mature;    
+    protected boolean mature;
+    /**
+     * NEW: Variable yeild
+     */
+    protected int yeild;
+    
     //[Growth Stage][Animation Frame];
     protected GreenfootImage[][] growthAnimations;
     protected int animationIndex;
+    protected int deltaIndex;
     protected DirtTile myTile;
-
+    
     public Plant(){
         myTile = null;
         myPlot = null;
@@ -41,10 +47,11 @@ public abstract class Plant extends Tile
         //fade
         if(growthStage > 0){
             fadeOval(getImage());
+            lifeTime++;
         }
         
         
-        lifeTime++;
+        
     }
 
     public abstract void grow();
@@ -55,19 +62,13 @@ public abstract class Plant extends Tile
         myTile = tile;
         Cursor.release();
     }
-    //animate
-    //NOTE: probably doesn't work as desired please change to your needs
-    public void nextFrame(){
-        animationIndex++;
-        if(animationIndex > growthAnimations[growthStage].length){
-            setImage(growthAnimations[growthStage][animationIndex]);
-        }
-        else{
-            animationIndex = 0;
-            setImage(growthAnimations[growthStage][animationIndex]);
-        }
-    }
-
+    
+    public abstract void nextFrame();
+    
+    /**
+     * NEW: Collect() method is now abstract
+     */
+    public abstract void collect();
     //getters and setters
     public int getGrowthRate(){
         return growthRate;
@@ -75,5 +76,44 @@ public abstract class Plant extends Tile
 
     public void setGrowthRate(int growthRate){
         this.growthRate = growthRate;
+    }
+    /**
+     * NEW: All getters and setters bellow this comment
+     */
+    public int getMaturity(){
+        return maturity;
+    }
+    public void setMaturity(int maturity){
+        this.maturity = maturity;
+    }
+    public int getGrowthStage(){
+        return growthStage;
+    }
+    public void setGrowthStage(int growthStage){
+        this.growthStage = growthStage;
+    }
+    public int getLifeTime(){
+        return lifeTime;
+    }
+    public void setLifeTime(int lifeTime){
+        this.lifeTime = lifeTime;
+    }
+    public boolean isMature(){
+        return mature;
+    }
+    public void setMature(boolean mature){
+        this.mature = mature;
+    }
+    public int getYield(){
+        return yeild;
+    }
+    public void setYield(int yeild){
+        this.yeild = yeild;
+    }
+    public DirtTile getDirtTile(){
+        return myTile;
+    }
+    public void setDirtTile(DirtTile newTile){
+        myTile = newTile;
     }
 }

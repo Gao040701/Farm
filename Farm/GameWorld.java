@@ -35,7 +35,7 @@ public class GameWorld extends World
         Inventory.initialize(saveFile);
         
         for(int i = 0; i < 100; i++){
-            addObject(new Wheat(), 1200, 650);
+            addObject(new StubbyWheat(), 1200, 650);
         }
     }
 }

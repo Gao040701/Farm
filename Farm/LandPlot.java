@@ -45,7 +45,10 @@ public class LandPlot extends Actor
         myImage.setColor(BABY_BLUE);
         myImage.fill();
         setImage(myImage);
-
+        
+        //puts many objects on screen
+        
+        
         //initialize the plot
         plot = new DirtTile[32][32];
 
@@ -126,4 +129,5 @@ public class LandPlot extends Actor
             removeFromPlot(row,col);
         }
     }
+    
 }

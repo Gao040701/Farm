@@ -1,19 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Wheat here.
+ * Write a description of class StubbyWheat here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Wheat extends Plant
+public class StubbyWheat extends Plant
 {
-    public static final int GROWTH_STAGES = 5;
-    private ObjectID ID = ObjectID.WHEAT;
+    public static final int GROWTH_STAGES = 4;
+    private ObjectID ID = ObjectID.STUBBY_WHEAT;
     /**
      * NEW: Variable deltaIndex moved to super class
      */
-    public Wheat(){
+    
+    public StubbyWheat(){
         super();
         initialize();
 
@@ -30,15 +31,24 @@ public class Wheat extends Plant
             grow();
         }
 
+        if(lifeTime % 12 == 0 && growthStage > 0){
+            nextFrame();
+        }
     }
 
     public void initialize(){
-        growthAnimations = new GreenfootImage[GROWTH_STAGES][1];
+        growthAnimations = new GreenfootImage[GROWTH_STAGES][3];
+        deltaIndex = 1;
         growthStage = 0;
         maturity = 0;
         growthRate = 1;
-        for(int i = 0; i < GROWTH_STAGES; i++){
-            growthAnimations[i][0] = new GreenfootImage("Wheat Stage " + i + ".png");
+        growthAnimations[0][0] = new GreenfootImage("Stubby Wheat Stage 0.png");
+        for(int stage = 1; stage < GROWTH_STAGES; stage++){
+            for(int frame = 0; frame < growthAnimations[stage].length; frame++){
+                System.out.println(stage +" " + frame);
+                growthAnimations[stage][frame] = new GreenfootImage("Stubby Wheat Stage " + stage + " " + frame + ".png");
+            }
+
         }
 
         setImage(growthAnimations[growthStage][0]);
@@ -52,11 +62,16 @@ public class Wheat extends Plant
             fadeOval(growthAnimations[growthStage][0]);
             setImage(growthAnimations[growthStage][0]);
         }
-        if(mature && hoveringThis()  && Greenfoot.mouseClicked(null)  && Cursor.getActor() == null && Cursor.getButton() == 1){
-            collect();
+
+        //when the growthStage is at max the crop is mature
+        if(growthStage == GROWTH_STAGES - 1){
+            mature = true;
         }
 
     }
+    /**
+     * NEW
+     */
     public void nextFrame(){
         animationIndex += deltaIndex;
         if(animationIndex >= 0 && animationIndex < growthAnimations[growthStage].length){
@@ -92,8 +107,10 @@ public class Wheat extends Plant
                 Cursor.release();
             }
         }
-
-        if(mature && hoveringThis() && Greenfoot.mouseClicked(null) && Cursor.getButton() == 1){
+        /**
+         * NEW
+         */
+        if(mature && hoveringThis()  && Greenfoot.mouseClicked(null)  && Cursor.getActor() == null && Cursor.getButton() == 1){
             collect();
         }
     }

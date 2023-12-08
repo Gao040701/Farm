@@ -6,5 +6,5 @@
  */
 public enum ObjectID  
 {
-    WHEAT, DIRTILE, LANDPLOT
+    WHEAT, DIRTILE, LANDPLOT, STUBBY_WHEAT
 }
